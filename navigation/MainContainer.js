@@ -10,7 +10,7 @@ import SettingsScreen from './screens/SettingsScreen';
 
 //Screen names
 const homeName = "Home";
-const detailsName = "LeaderBoard";
+const detailsName = "History";
 const settingsName = "Settings";
 
 const Tab = createBottomTabNavigator();
@@ -29,7 +29,7 @@ function MainContainer() {
               iconName = focused ? 'home' : 'home-outline';
 
             } else if (rn === detailsName) {
-              iconName = focused ? 'list' : 'list-outline';
+              iconName = focused ? 'calendar' : 'calendar-outline';
 
             } else if (rn === settingsName) {
               iconName = focused ? 'settings' : 'settings-outline';
@@ -40,7 +40,7 @@ function MainContainer() {
           },
         })}
         tabBarOptions={{
-          activeTintColor: '#a754b6',
+          activeTintColor: '#C7B2D6',
           inactiveTintColor: 'grey',
           labelStyle: { paddingBottom: 10, fontSize: 10 },
           style: { padding: 10, height: 70}

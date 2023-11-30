@@ -1,7 +1,6 @@
 import * as React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet, Image } from 'react-native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
-
 
 export default function SettingsScreen({ navigation }) {
     return (
@@ -16,13 +15,15 @@ export default function SettingsScreen({ navigation }) {
     );
 }
 
-const RectangleBox = ({ text }) => {
+
+const RectangleBox = ({ text, icon }) => {
     return (
-      <View style={styles.rectangle}>
-        {text && <Text style={styles.boxText}>{text}</Text>}
-      </View>
+        <View style={styles.rectangle}>
+            {icon && <Icon name={icon} size={30} color="#black" />}
+            {text && <Text style={styles.boxText}>{text}</Text>}
+        </View>
     );
-  };
+};
 
 const styles = StyleSheet.create({
     container:{
